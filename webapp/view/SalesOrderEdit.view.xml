@@ -1,0 +1,36 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.ui.layout.form"
+	xmlns="sap.m"
+	controllerName="my.sampleorders.SampleOrders.controller.SalesOrderEdit">
+	<Page id="editSalesOrderPage" title="{i18n>edit}" navButtonPress="onNavBack" showNavButton="true">
+		<VBox class="sapUiSmallMargin">
+			<f:SimpleForm id="SalesOrderHeaderEditForm" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4"
+						labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+						singleContainerFullSize="false" ariaLabelledBy="Title1">
+				<f:content>
+					<IconTabBar id="idIconTabBarMulti" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+						<items>
+							<IconTabFilter icon="sap-icon://hint">
+								<Label text="Customer"/>
+								<Input id="getCustomerID" value="{CustomerID}"/>
+								<Label text="Note"/>
+								<TextArea id="getNote" value="{Note}" width="100%"/>
+							</IconTabFilter>
+							<IconTabFilter icon="sap-icon://attachment">
+								<Text text="Attachments go here ..."/>
+							</IconTabFilter>
+						</items> 
+					</IconTabBar>
+				</f:content>
+			</f:SimpleForm> 	
+		</VBox>	
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button text="Save" press="onSave"  type="Emphasized"/>
+				<Button text="Cancel" press="onCancel"/>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

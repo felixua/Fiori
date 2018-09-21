@@ -1,0 +1,61 @@
+<mvc:View controllerName="my.sampleorders.SampleOrders.controller.SalesOrder" xmlns:mvc="sap.ui.core.mvc" xmlns:layout="sap.ui.layout"
+	xmlns="sap.uxap" xmlns:m="sap.m">
+	<m:Page title="{i18n>title}" navButtonPress="onNavBack" showNavButton="true">
+		<m:content>
+			<ObjectPageLayout id="ObjectPageLayout">
+				<headerTitle>
+					<ObjectPageHeader id="headerSalesOrder" headerDesign="Light" objectTitle="{SalesOrderID}">
+						<actions>
+							<ObjectPageHeaderActionButton icon="sap-icon://edit" text="Edit" type="Emphasized" tooltip="Edit" press="onEdit"/>
+						</actions>
+					</ObjectPageHeader>
+				</headerTitle>
+				<headerContent>
+					<m:ObjectNumber number="{NetAmount}" numberUnit="{CurrencyCode}"/>
+				</headerContent>
+				<sections>
+					<ObjectPageSection title="Header Data">
+						<subSections>
+							<ObjectPageSubSection title=" ">
+								<blocks>
+									<layout:VerticalLayout>
+										<m:Label text="Customer Name:" design="Bold"/>
+										<m:Text text="{CustomerName}"/>
+										<m:Text text=" "/>
+										<m:Label text="Notes:" design="Bold"/>
+										<m:Text text="{Note}"/>
+									</layout:VerticalLayout>
+								</blocks>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+					<ObjectPageSection title="Positions">
+						<subSections>
+							<ObjectPageSubSection title=" ">
+								<blocks>
+									<m:List items="{
+									               path: 'ToLineItems', 
+									               parameters: {
+									            		expand: 'ToProduct'
+									               }
+									         }" headerText="">
+										<m:items>
+											<m:ObjectListItem title="{ToProduct/Name}" type="Active" 
+												number="{ parts:[{path:'NetAmount'},{path:'CurrencyCode'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }"
+												numberUnit="{CurrencyCode}">
+												<m:attributes>
+													<m:ObjectAttribute text="{Quantity} {QuantityUnit}"/>
+													<m:ObjectAttribute text="{ToProduct/Description}"/>
+												</m:attributes>
+											</m:ObjectListItem>
+										</m:items>
+									</m:List>
+								</blocks>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+				</sections>
+			</ObjectPageLayout>
+		</m:content>
+	</m:Page>
+</mvc:View>
