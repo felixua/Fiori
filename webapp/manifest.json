@@ -12,7 +12,7 @@
 		"description": "{{appDescription}}",
 		"dataSources": {
 			"mainService": {
-				"uri": "/destinations/CN4/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/",
+				"uri": "/destinations/ES5/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0"
