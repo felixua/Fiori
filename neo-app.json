@@ -23,7 +23,7 @@
       "path": "/destinations/ES5/",
       "target": {
         "type": "destination",
-        "name": "CN4"
+        "name": "ES5"
       },
       "description": "CN4 Demo System"
     }
