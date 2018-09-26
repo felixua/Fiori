@@ -20,7 +20,7 @@
       "description": "SAPUI5 Test Resources"
     },
     {
-      "path": "/destinations/CN4/",
+      "path": "/destinations/ES5/",
       "target": {
         "type": "destination",
         "name": "CN4"
