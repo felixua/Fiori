@@ -12,13 +12,13 @@
 					<IconTabBar id="idIconTabBarMulti" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
 						<items>
 							<IconTabFilter icon="sap-icon://hint">
-								<Label text="Customer"/>
+								<Label text="{i18n>editCustomer}"/>
 								<Input id="getCustomerID" value="{CustomerID}"/>
-								<Label text="Note"/>
+								<Label text="{i18n>editNote}"/>
 								<TextArea id="getNote" value="{Note}" width="100%"/>
 							</IconTabFilter>
 							<IconTabFilter icon="sap-icon://attachment">
-								<Text text="Attachments go here ..."/>
+								<Text text="{i18n>attachments}"/>
 							</IconTabFilter>
 						</items> 
 					</IconTabBar>
@@ -28,8 +28,8 @@
 		<footer>
 			<Toolbar>
 				<ToolbarSpacer/>
-				<Button text="Save" press="onSave"  type="Emphasized"/>
-				<Button text="Cancel" press="onCancel"/>
+				<Button text="{i18n>Save}" press="onSave"  type="Emphasized"/>
+				<Button text="{i18n>Cancel}" press="onCancel"/>
 			</Toolbar>
 		</footer>
 	</Page>

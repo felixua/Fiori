@@ -14,22 +14,22 @@
 					<m:ObjectNumber number="{NetAmount}" numberUnit="{CurrencyCode}"/>
 				</headerContent>
 				<sections>
-					<ObjectPageSection title="Header Data">
+					<ObjectPageSection title="{i18n>headerData}">
 						<subSections>
 							<ObjectPageSubSection title=" ">
 								<blocks>
 									<layout:VerticalLayout>
-										<m:Label text="Customer Name:" design="Bold"/>
+										<m:Label text="{i18n>customerNameTitle}" design="Bold"/>
 										<m:Text text="{CustomerName}"/>
 										<m:Text text=" "/>
-										<m:Label text="Notes:" design="Bold"/>
+										<m:Label text="{i18n>notes}:" design="Bold"/>
 										<m:Text text="{Note}"/>
 									</layout:VerticalLayout>
 								</blocks>
 							</ObjectPageSubSection>
 						</subSections>
 					</ObjectPageSection>
-					<ObjectPageSection title="Positions">
+					<ObjectPageSection title="{i18n>positions}">
 						<subSections>
 							<ObjectPageSubSection title=" ">
 								<blocks>
